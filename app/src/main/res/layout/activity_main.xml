@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="/k0rfe5Cztgk/device2/user/get"
+            android:layout_weight="1"
+            android:id="@+id/subTopic"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:id="@+id/subscribe"
+            android:text="Subscribe" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="已订阅成功的主题："/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:paddingBottom="16dp">
+        <TextView
+            android:id="@+id/tvSubTopic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"/>
+    </ScrollView>
+
+
+
+    <!-- 接收到的消息显示框，使用 ScrollView 包装一个 TextView -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="接收到消息:"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:overScrollMode="never"
+        android:scrollbars="vertical"/>
+
+
+</LinearLayout>
